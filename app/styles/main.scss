@@ -12,27 +12,72 @@ body {
 }
 
 header {
-  padding: 5px;
+  padding: 10px;
   font-size: 1.5rem;
   text-align: center;
+  background-color: black;
+  color: #FFF;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 #start {
-  height: 85vh;
+  position: relative;
+  height: 90vh;
   color: #FFF;
   background-color: black;
   text-align: center;
+  overflow: hidden;
+  
   h1 {
+    color: #FFF;
     font-size: 2.5rem;
     line-height: 1.2;
-    font-weight: 100;
+    font-weight: 200;
     margin: 0 auto;
+    z-index: 2;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
   }
+
+  #ytplayer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 0;
+    transform: scale(1.2);
+  }
+
+  #video-shield {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
 }
 
-#tubular-container {
-  display: none;
-}
+/* Mobile first queries */
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
