@@ -15,7 +15,7 @@ function onYouTubePlayerAPIReady() {
   player = new YT.Player('ytplayer', {
     playerVars: { 
       'controls':0, 
-      'start':13, 
+      'start':14, 
       'end':154, 
       'showinfo':0, 
       'loop':1,
@@ -32,8 +32,11 @@ function onYouTubePlayerAPIReady() {
     events: { 'onReady': onPlayerReady }
   });
 }
+
 function onPlayerReady(event) {
-  $('#ytplayer').fadeIn(2000);
+  if ($(".checkSize").css("float") == "none"){
+    $('#ytplayer').fadeIn(2000);
+  }
   event.target.playVideo();
   event.target.mute();
   event.target.setPlaybackQuality("large");

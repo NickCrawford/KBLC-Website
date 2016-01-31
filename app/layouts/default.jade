@@ -16,14 +16,15 @@ html(lang='')
     link(rel='stylesheet', href='styles/main.css')
     // endbuild
   body
+    div.checkSize
     header
       div.container
         div.row#hamburger
           div.toppings
         div.row#links
           a(href="#About").two.columns.offset-by-two About
+          a(href="#Membership").two.columns Join
           a(href="#Events").two.columns Events
-          a(href="#Membership").two.columns Members
           a(href="#Alumni").two.columns Alumni
     section#start
       div#mobile-image
@@ -40,17 +41,43 @@ html(lang='')
       
     section#mission.container
       div.row
-        blockquote.eight.columns "Our mission is to prepare for leadership roles in the business environment through improved communication, and encourage a leadership-focused culture at Kent State." 
-    section#events
+        blockquote.twelve.columns "Our mission is to prepare for leadership roles in the business environment through improved communication, and encourage a leadership-focused culture at Kent State." 
+        br
+        #[a(href='about.html') Read More]
 
-    section#membership
-      h1 Become an associate.
-    footer.container
-      div.row
-        a(href="http://twitter.com")
-          img(src="twitter-icon.png")
-        a(href="http://facebook.com")
-          img(src="facebook-icon.png")
+    section#join
+      div.container
+        div.row
+          div.six.columns.offset-by-six
+            h1 Become an associate
+
+
+
+    section#events
+      div.bg-image
+      div.container
+        div.row
+          div.six.columns
+            h1 Get active
+            p The club attends various events to raise awarness and money for different charitable causes. We contribute our time to working with the community on various service projects as well as hosting several fundraising opportunities throughout the year including our own Bowling with Business event.
+    section#upcoming
+      div.container
+        h1 Upcoming Events
+        div.row
+          div.twelve.columns
+
+    
+    section#footer
+      div.container
+        div.row
+          a(href="https://twitter.com/KSUBLC").one.column.offset-by-four
+            img(src="images/icons/twitter.png")
+          a(href="https://www.facebook.com/pages/Kent-State-Business-Leadership-Club/880152058715358?ref=hl").one.column
+            img(src="images/icons/facebook.png")
+          a(href="https://www.linkedin.com/groups?mostRecent=&gid=8240390&trk=my_groups-tile-flipgrp").one.column
+            img(src="images/icons/linkedin.png")
+          a(href="mailto:kblcstaff@gmail.com").one.column
+            img(src="images/icons/mail.png")
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.

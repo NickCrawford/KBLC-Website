@@ -12,6 +12,13 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+img {
+  width: 100%;
+  vertical-align: center;
+  position: relative;
+  top: 50%;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -40,8 +47,14 @@ header {
 }
 
 section:not(#start) {
+  position: relative;
   text-align: center;
-  padding: 8vh 5vh;
+  padding: 8vh 0;
+
+  p {
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
 }
   
 #main-logo {
@@ -55,7 +68,7 @@ section:not(#start) {
 
 #start {
   position: relative;
-  height: 80vh;
+  height: auto;
   color: #FFF;
   background-color: black;
   text-align: center;
@@ -68,7 +81,7 @@ section:not(#start) {
     color: #FFF;
     font-size: 3.5rem;
     line-height: 1.2;
-    font-weight: 200;
+    font-weight: 100;
     margin: 0 auto;
     z-index: 2;
     position: relative;
@@ -77,11 +90,9 @@ section:not(#start) {
   }
 
   #mobile-image {
-    background: url(../images/start-image.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url("../images/start-image.jpg") ;
     background-size: cover;
+    background-position: center;
 
     z-index: 0;
     position: absolute;
@@ -125,10 +136,62 @@ section:not(#start) {
 
 }
 
-blockquote {
-    font-weight: 200;
-    font-size: 1.6em;
+#events {
+  color: white;
+  background-color: black;
+
+  .bg-image {
+    background: url("../images/bowlingbg.jpg") ;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
   }
+
+}
+
+blockquote {
+    font-style: bold;
+    font-size: 1.6em;
+
+    a {
+      font-size: 2rem; 
+    }
+}
+
+#footer {
+  background-color: black;
+  
+  img {
+    -webkit-filter: brightness(1); 
+    filter: brightness(1);
+
+    max-width: 30px;
+  }
+}
+
+.checkSize {float: left;}
+
+.bg-image {
+  position:absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.full-height {
+  height: 100%;
+}
+
+.hide-small {
+  display: none;
+}
 
 /* Mobile first queries */
 
@@ -153,17 +216,28 @@ blockquote {
     background-color: rgba(0,0,0,0.8);
   }
 
+  section:not(#start) {
+    p {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 200;
+    }
+  }
+
   blockquote {
-    font-size: 1.8em;
+    font-size: 2em;
+    font-weight: 400;
   }
 
   #start {
     height: 95vh;
     
       #ytplayer {
-        //display: block;
+        opacity: 0.48;
       }
   }
+
+  .checkSize {float: none;}
 
   #main-logo {
     width: 100%;
@@ -177,6 +251,10 @@ blockquote {
 
   #mobile-image {
     display: none;
+  }
+
+  .hide-small {
+    display: block;
   }
 
 }
