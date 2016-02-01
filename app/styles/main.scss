@@ -2,6 +2,10 @@
 @import '../bower_components/Skeleton-Sass/scss/skeleton.scss';
 // endbower
 
+//Colors
+$red: #662717;
+$darkGray: #555;
+
 html {
   height: 100%;
 }
@@ -10,6 +14,10 @@ body {
   height: 100%;
   background: #fafafa;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;  
 }
 
 img {
@@ -35,11 +43,17 @@ header {
     text-decoration: none;
     color: #fff;
     font-weight: 100;
+
   }
 }
 
 .no-wrap {
   white-space: nowrap;
+
+  .column, .columns {
+    float: none;
+    margin: 20px;
+  }
 }
 
 #links {
@@ -54,6 +68,10 @@ section:not(#start) {
   p {
     font-size: 2.5rem;
     font-weight: 200;
+  }
+
+  i {
+    font-style: italic; 
   }
 }
   
@@ -136,6 +154,25 @@ section:not(#start) {
 
 }
 
+#mission {
+  background-color: darken( $red, 5% );
+  color: #FFF;
+
+  a {
+    color: white;
+  }
+}
+
+#join {
+  a {
+    color: #555;
+    text-decoration: none;
+    :hover {
+      color: #000;
+    }
+  }
+} 
+
 #events {
   color: white;
   background-color: black;
@@ -149,8 +186,29 @@ section:not(#start) {
 
 }
 
-blockquote {
+#event-list {
+  width: auto;
+  margin: 0 auto;
+
+  * {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+  th {
+    text-align: center;
+    font-size: 2rem;
     font-style: bold;
+  }
+
+  td {
+    text-align: center;
+  }
+}
+
+blockquote {
+    font-weight: 200;
+    //font-style: bold;
     font-size: 1.6em;
 
     a {
@@ -200,6 +258,11 @@ blockquote {
   #main-logo {
     padding: 15% 0;
   }
+
+  #event-list {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* Larger than phablet */
@@ -227,11 +290,11 @@ blockquote {
 
   blockquote {
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 200;
   }
 
   #start {
-    height: 95vh;
+    height: 100vh;
     
       #ytplayer {
         opacity: 0.48;

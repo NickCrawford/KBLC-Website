@@ -1,3 +1,6 @@
+var events = "https://docs.google.com/spreadsheets/d/18R0dyRHd2uiA6JF4hmVbBTh3sY0hazsETQ92Bd0_6TA/edit#gid=0";
+
+
 $('document').ready(function() {
   //Smooth Scrolling
   $(document).on('click', 'a[href^="#"]', function(e) {
@@ -9,6 +12,14 @@ $('document').ready(function() {
       console.log(pos)
       $('body, html').animate({scrollTop: pos});
   });
+
+  $('#event-list').sheetrock({
+    url: events,
+    query: "select A,B,C,D ",
+    fetchSize: 10
+  });
+
+
 });
 
 // Load the IFrame Player API code asynchronously.

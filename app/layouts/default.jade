@@ -39,37 +39,49 @@ html(lang='')
             | Today's Students. 
             span.no-wrap Tomorrow's Leaders.
       
-    section#mission.container
-      div.row
-        blockquote.twelve.columns "Our mission is to prepare for leadership roles in the business environment through improved communication, and encourage a leadership-focused culture at Kent State." 
-        br
-        #[a(href='about.html') Read More]
+    section#mission
+      div.container
+        div.row
+          blockquote.twelve.columns "Our mission is to prepare for leadership roles in the business environment through improved communication, and encourage a leadership-focused culture at Kent State." 
+          br
+          #[a(href='about.html') Read More]
 
     section#join
       div.container
         div.row
-          div.six.columns.offset-by-six
-            h1 Become an associate
-
+          div.six.columns
+            h1 Become a member
+            p Our associate meetings are 
+            p #[b Every Other Tuesday #[span.no-wrap at 8:30 pm.]] 
+            p
+              a(href="https://goo.gl/maps/NdXK1u6tL3E2") #[i Room A311, Business Administration Building]
+            p 
+              a(href="#") Sign up here
+          div.six.columns
+            img(src="images/group.jpg")
 
 
     section#events
       div.bg-image
       div.container
         div.row
-          div.six.columns
-            h1 Get active
+          div.six.columns.offset-by-six
+            h1 Get involved
             p The club attends various events to raise awarness and money for different charitable causes. We contribute our time to working with the community on various service projects as well as hosting several fundraising opportunities throughout the year including our own Bowling with Business event.
     section#upcoming
       div.container
-        h1 Upcoming Events
+        h1 Upcoming
         div.row
-          div.twelve.columns
-
+          div.eight.columns.offset-by-two
+            table#event-list
+    section#alumni
+      div.container
+        h1 Alumni
+        p The Kent Business Leadership Club is a community that extends beyond just your time in university. As our organization ages, our alumni group speads out and becomes more expansive. We wanted to create a forum for associates to connect with experienced individuals for help in the real world. Join the KBLC community today and get connected with a large community of professionals willing to help.
     
     section#footer
       div.container
-        div.row
+        div.row.no-wrap
           a(href="https://twitter.com/KSUBLC").one.column.offset-by-four
             img(src="images/icons/twitter.png")
           a(href="https://www.facebook.com/pages/Kent-State-Business-Leadership-Club/880152058715358?ref=hl").one.column
@@ -90,7 +102,7 @@ html(lang='')
     // build:js scripts/vendor.js
     // bower:js
     script(src='/bower_components/jquery/dist/jquery.js')
-    script(src='sheetrock.min.js')
+    script(src='scripts/sheetrock.min.js')
     // endbower
     // endbuild
     // build:js scripts/main.js
