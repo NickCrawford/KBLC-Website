@@ -44,6 +44,8 @@
   },
   "dependencies": {
     "normalize-scss": "^4.0.3",
-    "sheetrock": "^1.0.0"
+    "sheetrock": "^1.0.0",
+    "skeleton": "^0.1.2",
+    "skeleton-css": "^2.0.4"
   }
 }

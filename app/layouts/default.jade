@@ -12,8 +12,9 @@ html(lang='')
     // endbower
     // endbuild
     // build:css styles/main.css
-    link(rel='stylesheet', href='styles/reset.css')
+    link(rel='stylesheet', href='styles/normalize.css')
     link(rel='stylesheet', href='styles/main.css')
+    link(rel='stylesheet', href='styles/skeleton.css')
     // endbuild
   body
     div.checkSize
@@ -44,7 +45,7 @@ html(lang='')
         div.row
           blockquote.twelve.columns "Our mission is to prepare for leadership roles in the business environment through improved communication, and encourage a leadership-focused culture at Kent State." 
           br
-          #[a(href='about.html') Read More]
+          a(href='about.html') Read More
 
     section#join
       div.container
