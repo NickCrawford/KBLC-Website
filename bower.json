@@ -4,7 +4,7 @@
   "dependencies": {
     "jquery": "~2.2.0",
     "normalize-scss": "normalize.scss#~4.0.3",
-    "skeleton": "skeleton-css#~2.0.4"
+    "skeleton-sass": "~2.5.2"
   },
   "devDependencies": {
     "chai": "~3.4.2",
