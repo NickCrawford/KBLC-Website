@@ -243,12 +243,15 @@ blockquote {
 
 
 .no-wrap {
-  // white-space: nowrap;
+  white-space: nowrap;
+}
 
-  // .column, .columns {
-  //   float: none;
-  //   margin: 20px;
-  // }
+.keep-together {
+  .column, .columns {
+    width: auto;
+    float: none !important;
+    margin: 0 15px;
+  }
 }
 
 /* Mobile first queries */
@@ -277,6 +280,14 @@ blockquote {
   #main-logo {
     width: 100%;
     padding: 50% 0 70% 0;
+  }
+
+  .keep-together {
+    .column, .columns {
+      width: 100%;
+      float: left !important;
+      margin: none;
+    }
   }
 }
 
