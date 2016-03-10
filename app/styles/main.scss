@@ -12,7 +12,8 @@ html {
 body {
   height: 100%;
   background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 a {
@@ -33,7 +34,7 @@ header {
   right: 0;
   padding: 20px 10px;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: thin;
   text-align: center;
   background-color: rgba(0,0,0,0);
   color: #FFF;
@@ -58,7 +59,7 @@ section:not(#start) {
 
   p {
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: thin;
   }
 
   i {
@@ -90,7 +91,7 @@ section:not(#start) {
     color: #FFF;
     font-size: 3.5rem;
     line-height: 1.2;
-    font-weight: 100 !important;
+    font-weight: thin !important;
     margin: 0 auto;
     z-index: 2;
     position: relative;
@@ -198,7 +199,7 @@ section:not(#start) {
 }
 
 blockquote {
-    font-weight: 200;
+    font-weight: thin;
     //font-style: bold;
     font-size: 1.6em;
     margin: 0;

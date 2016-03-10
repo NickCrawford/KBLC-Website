@@ -5,12 +5,13 @@ $('document').ready(function() {
   //Smooth Scrolling
   $(document).on('click', 'a[href^="#"]', function(e) {
       var id = $(this).attr('href');
-      e.preventDefault();
-      var pos = $(id).offset().top;
-      var header_h = $('header').outerHeight();
+      e.preventDefault();//prevent the browser from jumping to anchor
+
+      var pos = $(id).offset().top;// find the position (px) to scroll to
+      var header_h = $('header').outerHeight(); //Find the header height
       pos -= header_h;
-      console.log(pos)
-      $('body, html').animate({scrollTop: pos});
+
+      $('body, html').animate({scrollTop: pos});//Smoothly scroll to position
   });
 
   $('#event-list').sheetrock({
@@ -18,6 +19,19 @@ $('document').ready(function() {
     query: "select A,B,C,D ",
     fetchSize: 10
   });
+
+  //Handling Links
+  //Check first if local link or external link
+  var comp = new RegExp("http");
+  console.log(comp);
+
+    $('a').click( function(e) {
+        if(!comp.test($(this).attr('href'))){
+            // a link that contains the current host  INTERNAL
+            event.preventDefault();         
+        
+        }
+    });
 
 
 });
