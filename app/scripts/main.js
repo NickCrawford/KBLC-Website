@@ -2,38 +2,47 @@ var events = "https://docs.google.com/spreadsheets/d/18R0dyRHd2uiA6JF4hmVbBTh3sY
 
 
 $('document').ready(function() {
-  //Smooth Scrolling
-  $(document).on('click', 'a[href^="#"]', function(e) {
-      var id = $(this).attr('href');
-      e.preventDefault();//prevent the browser from jumping to anchor
+    //Smooth Scrolling
+    $(document).on('click', 'a[href^="#"]', function(e) {
+        var id = $(this).attr('href');
+        e.preventDefault();//prevent the browser from jumping to anchor
 
-      var pos = $(id).offset().top;// find the position (px) to scroll to
-      var header_h = $('header').outerHeight(); //Find the header height
-      pos -= header_h;
+        var pos = $(id).offset().top;// find the position (px) to scroll to
+        var header_h = $('header').outerHeight(); //Find the header height
+        pos -= header_h;
 
-      $('body, html').animate({scrollTop: pos});//Smoothly scroll to position
-  });
-
-  $('#event-list').sheetrock({
-    url: events,
-    query: "select A,B,C,D ",
-    fetchSize: 10
-  });
-
-  //Handling Links
-  //Check first if local link or external link
-  var comp = new RegExp("http");
-  console.log(comp);
-
-    $('a').click( function(e) {
-        if(!comp.test($(this).attr('href'))){
-            // a link that contains the current host  INTERNAL
-            event.preventDefault();         
-        
-        }
+        $('body, html').animate({scrollTop: pos});//Smoothly scroll to position
     });
 
+    $('#event-list').sheetrock({
+        url: events,
+        query: "select A,B,C,D ",
+        fetchSize: 10
+    });
 
+    //calculate min height for page so footer lines up properly if content is too short
+
+   
+
+});
+
+//Check first if local link or external link
+var http = new RegExp("http"),
+    anchor = new RegExp("#");
+
+$('a').click( function(e) {
+    var newPage = $(this).attr('href');
+    if(!http.test(newPage) && !anchor.test(newPage)){
+        //alert("internal");
+        event.preventDefault();
+        $('body').append("<div id='newDiv'></div>");
+        $(this).html("Read Less");
+        $(this).prepend($('#newDiv').load(newPage));
+        $(this).css("min-height", function() {
+            console.log(window.innerHeight);
+             return (window.innerHeight - $('header').outerHeight() - $('footer').outerHeight());
+        });
+    }
 });
 
 // Load the IFrame Player API code asynchronously.
