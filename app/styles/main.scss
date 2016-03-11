@@ -16,8 +16,12 @@ body {
   Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+#content {
+  position: relative;
+}
+
 a {
-  text-decoration: none;  
+  text-decoration: underline;  
 }
 
 img {

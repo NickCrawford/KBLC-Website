@@ -21,8 +21,9 @@ $('document').ready(function() {
     });
 
     //calculate min height for page so footer lines up properly if content is too short
-
-   
+    $("#content").css("min-height", function() {
+        return (window.innerHeight - 2 * $('header').outerHeight() -  $('footer').outerHeight());
+    });
 
 });
 
@@ -35,13 +36,13 @@ $('a').click( function(e) {
     if(!http.test(newPage) && !anchor.test(newPage)){
         //alert("internal");
         event.preventDefault();
-        $('body').append("<div id='newDiv'></div>");
-        $(this).html("Read Less");
-        $(this).prepend($('#newDiv').load(newPage));
-        $(this).css("min-height", function() {
-            console.log(window.innerHeight);
-             return (window.innerHeight - $('header').outerHeight() - $('footer').outerHeight());
-        });
+        $("#content").fadeOut(500, function() {
+            $(this).load(newPage, function() {
+                $(this).fadeIn(500);
+            });
+        })
+        
+        
     }
 });
 
