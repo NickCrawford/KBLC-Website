@@ -91,8 +91,6 @@ function onYouTubePlayerAPIReady() {
 function onPlayerReady(event) {
   if ($(".checkSize").css("float") == "none"){
     $('#ytplayer').fadeIn(2000);
-  } else {
-    $('#ytplayer').fadeOut(2000);
   }
   event.target.playVideo();
   event.target.mute();
