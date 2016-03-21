@@ -9,7 +9,9 @@ $('document').ready(function() {
 
         var pos = $(id).offset().top;// find the position (px) to scroll to
         var header_h = $('header').outerHeight(); //Find the header height
-        pos -= header_h;
+        if ($(".checkSize").css("float") == "none"){
+          pos -= header_h;
+        }
 
         $('body, html').animate({scrollTop: pos});//Smoothly scroll to position
     });
@@ -23,6 +25,15 @@ $('document').ready(function() {
     //calculate min height for page so footer lines up properly if content is too short
     $("#content").css("min-height", function() {
         return (window.innerHeight - 2 * $('header').outerHeight() -  $('footer').outerHeight());
+    });
+
+    //mobile menu
+    $('#hamburger').click(function() {
+      if ($("#links").css('display') == 'none') {
+        $('#links').css('display', 'block');
+      } else {
+        $('#links').css('display', 'none');
+      }
     });
 
 });
@@ -80,6 +91,8 @@ function onYouTubePlayerAPIReady() {
 function onPlayerReady(event) {
   if ($(".checkSize").css("float") == "none"){
     $('#ytplayer').fadeIn(2000);
+  } else {
+    $('#ytplayer').fadeOut(2000);
   }
   event.target.playVideo();
   event.target.mute();
