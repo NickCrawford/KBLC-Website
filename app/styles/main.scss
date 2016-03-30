@@ -12,16 +12,11 @@ html {
 body {
   height: 100%;
   background: #fafafa;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
-  Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-#content {
-  position: relative;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a {
-  text-decoration: underline;  
+  text-decoration: none;  
 }
 
 img {
@@ -38,9 +33,9 @@ header {
   right: 0;
   padding: 20px 10px;
   font-size: 2rem;
-  font-weight: thin;
+  font-weight: 100;
   text-align: center;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0);
   color: #FFF;
 
   z-index: 10;
@@ -50,49 +45,10 @@ header {
     font-weight: 100;
 
   }
-
-  #hamburger {
-    position: relative;
-    padding-left: 1.25em;
-
-    height: 1em;
-    z-index: 11;
-    cursor: pointer;
-  }
-
-  #hamburger:before {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 1.25em;
-    height: 0.15em;
-    background:  white;
-    box-shadow: 
-      0 0.35em 0 0 white,
-      0 0.7em 0 0 white;
-  }
-
-}
-
-
-#tiny-logo {
-  width: 50%;
-  max-width: 200px;
-  display: inline-block;
 }
 
 #links {
-    font-size: 1.5em;
-    padding-top: 50px;
-
-    display: none;
-    position: relative;
-    top: -50px;
-    height: 100vh;
-
-    a {
-      padding-top: 25px;
-    }
+  display: none;
 }
 
 section:not(#start) {
@@ -102,7 +58,7 @@ section:not(#start) {
 
   p {
     font-size: 2rem;
-    font-weight: thin;
+    font-weight: 100;
   }
 
   i {
@@ -134,7 +90,7 @@ section:not(#start) {
     color: #FFF;
     font-size: 3.5rem;
     line-height: 1.2;
-    font-weight: thin !important;
+    font-weight: 100 !important;
     margin: 0 auto;
     z-index: 2;
     position: relative;
@@ -242,7 +198,7 @@ section:not(#start) {
 }
 
 blockquote {
-    font-weight: thin;
+    font-weight: 200;
     //font-style: bold;
     font-size: 1.6em;
     margin: 0;
@@ -311,14 +267,6 @@ blockquote {
     width: 100%;
     margin: 0 auto;
   }
-  #links {
-    a {
-      display: block;
-      float: none;
-      margin: 0 auto;
-      min-width: 100px; 
-    }
-  }
 }
 
 /* Larger than phablet */
@@ -335,13 +283,12 @@ blockquote {
       margin: none;
     }
   }
-
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
   header {
-    height: auto;
+    background-color: rgba(0,0,0,0.9);
     box-shadow: rgba(10,10,10, 0.3) 0 3px 10px 0;
   }
 
@@ -375,28 +322,8 @@ blockquote {
 
   #links {
     display: block;
-    font-size: 1em;
-    padding-top: 0;
-    height: auto;
-
-    text-align: center;
-    top: 0;
-
-    a {
-      padding-top: 0;   
-      float: none;
-      display: inline-block;
-      min-width: 0px; 
-    }
   }
 
-  #tiny-logo {
-    display: none;
-  }
-
-  #hamburger {
-    display: none;
-  }
 
   #mobile-image {
     display: none;
