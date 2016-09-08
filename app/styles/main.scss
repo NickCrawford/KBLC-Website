@@ -286,6 +286,11 @@ blockquote {
   display: none;
 }
 
+p.small {
+  margin-top: -2.5rem;
+  font-size: 1.5rem !important;
+}
+
 
 .no-wrap {
   white-space: nowrap;
@@ -398,9 +403,9 @@ blockquote {
     display: none;
   }
 
-  #mobile-image {
-    display: none;
-  }
+  // #mobile-image {
+  //   display: none;
+  // }
 
   .hide-small {
     display: block;
